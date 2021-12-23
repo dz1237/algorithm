@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [10, 25, 6, 1, 8, 9, 47, 54,]
+        let Nume = (arr) => {
+            for (let j = 0; j < arr.length - 1; j++) {
+                for (let i = 0; i < arr.length - 1 - j; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        const temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log(Nume(arr));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
