@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [8944651, 8789, 456, 4561, 156, 123312, 123]
+        let Nume = () => {
+            for (let i = 0; i < arr.length; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                let temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp
+
+            }
+            return arr
+        }
+        console.log(Nume(arr));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
